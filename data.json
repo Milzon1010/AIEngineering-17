@@ -1,0 +1,66 @@
+{
+  "title": "Teaching Computers to See: Building Image Recognition Models with CNNs and Keras",
+  "introduction": {
+    "title": "Introduction",
+    "text": "Welcome to our interactive guide on teaching computers to see! In this guide, you'll learn the basics of image recognition, understand what Convolutional Neural Networks (CNNs) are, and see how to build a simple image recognition model using Keras. This guide is designed for beginner AI engineering students, so we'll keep things simple and easy to understand."
+  },
+  "cnn": {
+    "title": "What are Convolutional Neural Networks (CNNs)?",
+    "text": "A Convolutional Neural Network (CNN) is a type of deep learning model that is particularly well-suited for image recognition tasks. Think of it as a series of filters that can detect patterns in images, such as edges, shapes, and textures. These filters are learned automatically from the data, which makes CNNs very powerful.",
+    "layers": [
+      {
+        "name": "Convolutional Layer",
+        "description": "This is the core building block of a CNN. It applies a set of filters to the input image to create feature maps that highlight specific patterns."
+      },
+      {
+        "name": "Pooling Layer",
+        "description": "This layer reduces the spatial dimensions of the feature maps, which helps to reduce the computational complexity of the model and control overfitting."
+      },
+      {
+        "name": "Fully Connected Layer",
+        "description": "This layer takes the high-level features from the convolutional and pooling layers and uses them to make a prediction about the image."
+      }
+    ]
+  },
+  "keras": {
+    "title": "Building an Image Recognition Model with Keras",
+    "text": "Keras is a high-level neural networks API that is easy to use and perfect for beginners. Here's a simple example of how to build a CNN model with Keras:",
+    "code": "from tensorflow.keras.models import Sequential\nfrom tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense\n\n# Create a Sequential model\nmodel = Sequential()\n\n# Add a convolutional layer\nmodel.add(Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)))\n\n# Add a pooling layer\nmodel.add(MaxPooling2D((2, 2)))\n\n# Flatten the output\nmodel.add(Flatten())\n\n# Add a fully connected layer\nmodel.add(Dense(10, activation='softmax'))\n\n# Compile the model\nmodel.compile(optimizer='adam',\n              loss='sparse_categorical_crossentropy',\n              metrics=['accuracy'])"
+  },
+  "conclusion": {
+    "title": "Conclusion",
+    "text": "Congratulations! You've learned the basics of image recognition, CNNs, and Keras. Now you have a foundational understanding of how to teach computers to see. The next step is to practice building your own models and exploring more advanced topics in computer vision."
+  },
+  "quiz": {
+    "title": "Test Your Knowledge",
+    "questions": [
+      {
+        "question": "What is the main purpose of a Convolutional Neural Network (CNN)?",
+        "options": [
+          "Natural Language Processing",
+          "Image Recognition",
+          "Time Series Analysis"
+        ],
+        "answer": "Image Recognition"
+      },
+      {
+        "question": "Which Keras layer is used to reduce the spatial dimensions of a feature map?",
+        "options": [
+          "Dense",
+          "Conv2D",
+          "MaxPooling2D"
+        ],
+        "answer": "MaxPooling2D"
+      },
+      {
+        "question": "What is the purpose of the 'softmax' activation function in the output layer of a classification model?",
+        "options": [
+          "To normalize the output to a probability distribution",
+          "To make the model run faster",
+          "To prevent overfitting"
+        ],
+        "answer": "To normalize the output to a probability distribution"
+      }
+    ]
+  }
+}
