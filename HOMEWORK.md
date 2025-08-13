@@ -2,11 +2,14 @@
 
 ## Task
 
-Your task is to find a real-world example of image recognition and write a short description of how it works. You can choose any example you like, such as:
+Your first task is to find a real-world example of image recognition and write a short description of how it works. You can choose any example you like, such as:
 
 - Facial recognition on your smartphone
 - A self-checkout system at a grocery store
 - A feature on a social media app that automatically tags your friends in photos
+
+Your second task : 
+- Build a simple keras image recognition model to recognize patterns in one of your examples.
 
 ## Instructions
 
